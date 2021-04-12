@@ -23,6 +23,7 @@ helmfile install helmfile.yaml
 Then make sure the vault pod is running correctly in the `jx-vault` namespace:
 
 ```bash 
+jx secret vault port-forward&
 jx secret vault wait
 ```
 
