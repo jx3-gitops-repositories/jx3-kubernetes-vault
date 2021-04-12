@@ -20,10 +20,10 @@ cd infra
 helmfile install helmfile.yaml
 ```
 
-Then make sure all the pods are running correctly in the `jx-vault` namespace:
+Then make sure the vault pod is running correctly in the `jx-vault` namespace:
 
 ```bash 
-kubectl get pod -n jx-vault -w 
+jx secret vault wait
 ```
 
 Once your vault is up and running you can [setup the git operator](https://jenkins-x.io/v3/admin/setup/operator/) 
