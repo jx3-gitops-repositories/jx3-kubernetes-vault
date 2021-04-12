@@ -8,7 +8,7 @@ repositories:
 releases:
 - chart: banzaicloud-stable/vault-operator
   name: vault-operator
-  verison: 1.10.0
+  version: 1.10.0
   forceNamespace: ""
   skipDeps: null
 - chart: jx3/vault-instance
