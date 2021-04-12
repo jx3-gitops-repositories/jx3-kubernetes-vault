@@ -39,7 +39,7 @@ jxRequirements:
     domain: change.me
     externalDNS: false
     kind: ingress
-    namespaceSubDomain: -jx.
+    namespaceSubDomain: -secret-infra.
     tls:
       email: ""
       enabled: false
@@ -57,4 +57,4 @@ jxRequirementsKuberhealthy:
 jxRequirementsTLSCheck:
   enabled: false
 jxRequirementsVault:
-  enabled: false
+  enabled: true

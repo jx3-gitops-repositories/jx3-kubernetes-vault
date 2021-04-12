@@ -13,17 +13,15 @@ repositories:
   url: https://storage.googleapis.com/jenkinsxio/charts
 releases:
 - chart: external-secrets/kubernetes-external-secrets
-  version: 5.2.0
+  version: 6.3.0
   name: kubernetes-external-secrets
   values:
   - ../../versionStream/charts/external-secrets/kubernetes-external-secrets/values.yaml.gotmpl
-  forceNamespace: ""
-  skipDeps: null
+  - jx-values.yaml
 - chart: jx3/pusher-wave
-  version: 0.4.12
+  version: 0.4.16
   name: pusher-wave
-  forceNamespace: ""
-  skipDeps: null
+  values:
+  - jx-values.yaml
 templates: {}
-missingFileHandler: ""
 renderedvalues: {}
