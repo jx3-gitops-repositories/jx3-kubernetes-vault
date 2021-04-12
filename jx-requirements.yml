@@ -28,6 +28,6 @@ spec:
       enabled: false
       production: false
   repository: bucketrepo
-  secretStorage: local
+  secretStorage: vault
   vault: {}
   webhook: lighthouse
