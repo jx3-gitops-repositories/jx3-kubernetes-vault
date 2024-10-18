@@ -1,19 +1,24 @@
 filepath: ""
 namespace: jx-vault
 repositories:
-- name: banzaicloud-stable
-  url: https://kubernetes-charts.banzaicloud.com
-- name: jx3
-  url: https://storage.googleapis.com/jenkinsxio/charts
+- name: bank-vaults
+  url: ghcr.io/bank-vaults/helm-charts
+  oci: true
+- name: jxgh
+  url: https://jenkins-x-charts.github.io/repo
 releases:
-- chart: banzaicloud-stable/vault-operator
+- chart: bank-vaults/vault-operator
   name: vault-operator
-  version: 1.10.0
+  version: 1.22.3
   forceNamespace: ""
   skipDeps: null
-- chart: jx3/vault-instance
+- chart: jxgh/vault-instance
+  version: 1.0.28
   name: vault-instance
-  version: 1.0.15
+  values:
+  - bankVaultsImage: ghcr.io/bank-vaults/bank-vaults:v1.31.2
+    ingress:
+      enabled: false
   forceNamespace: ""
   skipDeps: null
 templates: {}
